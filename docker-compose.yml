@@ -1,0 +1,9 @@
+services:
+  gestion-franquicias-app:
+    build: .
+    container_name: gestion-franquicias-container
+    ports:
+      - "8081:8081"
+    environment:
+      - spring.data.mongodb.uri=${SPRING_DATA_MONGODB_URI}
+    restart: always
