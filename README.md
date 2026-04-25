@@ -33,6 +33,7 @@ Siguiendo Clean Architecture, el código se organiza en:
 - Otra opcion para la prueba en local, es reemplazar y adicionar las siguientes líneas en los archivos de application.properties y docker-compose.yml respectivamente de esta forma:
   - En application.properties -> spring.data.mongodb.uri=${MONGODB_URI:mongodb://localhost:27017/gestion_franquicias}
   - En docker-compose.yml: 
+  ```yaml
     services:
       app-franquicias:
         build: .
@@ -47,6 +48,7 @@ Siguiendo Clean Architecture, el código se organiza en:
         image: mongo:latest
         ports:
           - "27017:27017"
+  ```
 - ./mvnw clean package -DskipTests (Compilar y generar el archivo JAR omitiendo los tests)
 
 ### Paso 2: Levantar con Docker Compose
